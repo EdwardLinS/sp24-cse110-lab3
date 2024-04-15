@@ -8,8 +8,8 @@ assignees: ''
 ---
 
 # Type
-[ ] Todo
-[ ] Bug
+- [ ] Todo
+- [ ] Bug
 
 # Content
 -
