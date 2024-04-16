@@ -132,7 +132,7 @@ li {
 .agenda {
     font-style: italic;
 
-    & :hover {
+    :hover {
         color: pink;
     }
 }
