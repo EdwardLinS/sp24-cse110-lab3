@@ -1,0 +1,172 @@
+/* 
+comment done
+color done
+css var and fallback
+background
+unit 2 relative, 3 absolute
+box model 
+margin DONE,
+padding DONE, 
+border  DONE 
+text
+display
+size
+position
+psuedo
+layout
+responsiveness
+font
+*/
+
+/* 
+class 
+id
+element
+attribute
+psuedo
+selector list
+combinators
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jersey+15+Charted&family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+
+* {
+    font-size: 20px;
+}
+
+@media (max-width: 1250px) {
+    * {
+        font-size: 30px;
+    }
+}
+
+
+
+header {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+h1 {
+    --var-color: lightpink;
+    background-color: var(--var-color, lightblue);
+
+    text-align: center;
+    text-decoration: underline;
+
+    padding: 1vw 2vw;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+    border-color: black;
+    border-style: dashed;
+    border-radius: 12cm;
+    border-width: 1%;
+
+    width: 50%;
+    max-width: 750px;
+
+    position: static;
+}
+
+h1:hover {
+    background-color: purple;
+    color: white;
+}
+
+h2 {
+    color: #ff0000;
+
+    padding-left: 1%;
+    margin: 2px 4px;
+    border: 0.5px solid black;
+}
+
+/* for the section headers */
+h3 {
+    color: blue;
+    display: inline-block;
+
+    background-color: white;
+
+    height: 3vw;
+    max-height: 50px;
+    min-width: 10px;
+
+    position: sticky;
+    top: 0px;
+}
+
+details {
+    margin-left: 10px;
+    display: block;
+}
+
+details:active {
+    color: red;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+li {
+    margin: 2vw;
+    font-family: "Jersey 15 Charted", sans-serif;
+}
+
+/* class selection */
+.agenda {
+    font-style: italic;
+
+    & :hover {
+        color: pink;
+    }
+}
+
+#myname {
+    background: linear-gradient(#e66465, #9198e5);
+    color: white;
+}
+
+img[alt="Man explaining whiteboard"], img[alt="Man explaining investigation board"] {
+    width: 30%;
+    height: auto;
+}
+
+details audio {
+    width: 50%;
+}
+
+ol > li {
+    color: gray;
+}
+
+h3 ~ ul {
+    width: auto;
+}
+
+#myname + li {
+    color: red;
+}
+
+summary.questions {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3:has(+ ul) {
+    background: #64bf37;
+}
