@@ -2,9 +2,18 @@
 <html lang="en">
 
 <head>
+    <meta name="description" content="Meeting Minute Template">
     <title>Minutes</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
     <link rel="stylesheet" href="index.css">
+
+    <!-- internal css -->
+    <style>
+        body {
+            /* hue saturation lightness alpha values */
+            background-color: hsl(51, 80%, 90%);
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +23,17 @@
         <p><strong>04/09/2024</strong></p>
     </header>
 
-    <hr />
+    <nav>
+        <span>
+            <a href="">Home</a>
+        </span>
+
+        <div>
+            About Me
+        </div>
+    </nav>
+
+    <hr>
 
     <main>
 
@@ -28,7 +47,7 @@
             </ul>
         </section>
 
-        <hr />
+        <hr>
 
         <section class="agenda">
             <h3><i>Agenda</i></h3>
@@ -50,14 +69,15 @@
                     <strong>Unfinished Items</strong>
                 </summary>
                 <ol>
-                    <li>First thing</li>
+                    <!-- inline css and rgb -->
+                    <li style="color: rgb(209, 80, 235)">First thing</li>
                     <li>Second thing</li>
                     <li>Last thing</li>
                 </ol>
             </details>
         </section>
 
-        <hr />
+        <hr>
 
         <section>
             <h3><i>Additional Notes</i></h3>
@@ -88,12 +108,12 @@
                     <strong>Concerns</strong>
                 </summary>
                 <ul>
-                    <li>Notes here...</li>
+                    <li><b>Notes here...</b></li>
                 </ul>
             </details>
         </section>
 
-        <hr />
+        <hr>
 
         <section>
 
@@ -107,7 +127,7 @@
 
         </section>
 
-        <hr />
+        <hr>
 
         <section>
 
@@ -127,7 +147,71 @@
 
         </section>
 
+        <section>
+            <h3><i>Feedback Form</i></h3>
+
+            <form>
+                <fieldset>
+                    <span>Name: </span>
+                    <input type="text">
+                    <br>
+
+                    <span>Date: </span>
+                    <input type="date">
+                    <br>
+
+                    <span>Member?:</span>
+                    <input type="checkbox" id="member" name="member">
+                    <label for="member">Member?</label>
+
+                    <input type="checkbox" id="gold" name="gold">
+                    <label for="gold">Gold?</label>
+                    <br>
+
+                    <span>Gender: </span>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                    <br>
+                    <br>
+
+                    <label for="topic-choice">What's the topic?</label>
+                    <input list="topic" id="topic-choice" name="topic-choice">
+
+                    <datalist id="topic">
+                        <option value="Question"></option>
+                        <option value="Complaint"></option>
+                    </datalist>
+                    <br>
+
+                    <label for="selection">Please select</label>
+                    <select name="selection" id="selection">
+                        <option value="one">One</option>
+                        <option value="one">Two</option>
+                    </select>
+                    <br>
+
+                    <span>THE FUN BUTTON</span>
+                    <button type="button">Press Me!</button>
+                    <br>
+
+                    <span>Comments?</span>
+                    <br>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </fieldset>
+            </form>
+        </section>
+
     </main>
+
+    <footer>
+        <p><em>Template by Edward Lin</em></p>
+    </footer>
 </body>
 
 </html>
