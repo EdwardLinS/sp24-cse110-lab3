@@ -1,122 +1,138 @@
-/* 
-comment done
-color done
-css var and fallback
-background
-unit 2 relative, 3 absolute
-box model 
-margin DONE,
-padding DONE, 
-border  DONE 
-text
-display
-size
-position
-psuedo
-layout
-responsiveness
-font
-*/
+/* rgb and hsl are in index.html */
 
-/* 
-class 
-id
-element
-attribute
-psuedo
-selector list
-combinators
-
-
-
-*/
+/* import the font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jersey+15+Charted&family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
-
+/* Universal selector */
 * {
+    /* absolute unit */
     font-size: 20px;
 }
 
+/* media query */
 @media (max-width: 1250px) {
     * {
         font-size: 30px;
     }
 }
 
-
-
+/* element selector */
 header {
+    /* grid with at least 3 grid attributes */
     display: grid;
     grid-auto-columns: auto;
     grid-gap: 30px;
     justify-items: center;
+    /* absolute unit */
+    row-gap: 10pt;
 }
 
 h1 {
+    /* variable with fallback */
     --var-color: lightpink;
-    background-color: var(--var-color, lightblue);
+    background-color: var(--var-color, orange);
 
+    /* text */
     text-align: center;
     text-decoration: underline;
 
-    padding: 1vw 2vw;
-    margin-bottom: 0px;
+    /* short padding */
+    /* relative unit */
+    padding: 1vw 2vw 1vw 2vw;
+
+    /* long margin */
     margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 0px;
 
-    border-color: black;
+    /* long border */
     border-style: dashed;
-    border-radius: 12cm;
+    /* color name */
+    border-color: black;
     border-width: 1px;
+    /* absolute unit */
+    border-radius: 12cm;
 
+    /* sizing */
+    /* relative unit */
     width: 50%;
     max-width: 750px;
 
+    /* position */
     position: static;
 }
 
+/* psuedo-class selector */
 h1:hover {
-    background-color: purple;
-    color: white;
+    /* background color */
+    /* wider-gamut color */
+    background-color: color-mix(in lch, plum 40%, red);
+
+    /* text */
+    color: white; 
 }
 
 h2 {
-    color: #ff0000;
+    /* wider-gamut color */
+    color: color(srgb 1 0 1 / 0.6);
 
-    padding-left: 1%;
-    margin: 2px 4px;
+    /* long padding */
+    /* relative unit */
+    padding-left: 2rem;
+    padding-right: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    /* short margin */
+    margin: 2px 4px 2px 4px;
+
+    /* short border */
     border: 0.5px solid black;
 }
 
 /* for the section headers */
 h3 {
-    color: blue;
+    color: white;
+    /* dipslay */
     display: inline-block;
 
-    background-color: white;
+    background-color: color(display-p3 1 0 0.331);
 
-    height: 3vw;
+    /* sizing */
+    height: 5vw;
     max-height: 50px;
     min-width: 10px;
 
+    /* position */
     position: sticky;
     top: 0px;
 }
 
 details {
     margin-left: 10px;
+    /* display */
     display: block;
 }
 
+/* psuedo-class */
 details:active {
     color: red;
 }
 
 section {
+    /* flexbox with at least 3 attributes */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex: auto;
+    flex-wrap: wrap;
+
+    /* auto margin */
+    margin: auto;
 }
 
-ul {
+/* selector list */
+ol, ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -125,48 +141,60 @@ ul {
 
 li {
     margin: 2vw;
+
+    /* 3rd party font */
     font-family: "Jersey 15 Charted", sans-serif;
 }
 
-/* class selection */
+/* class selector */
 .agenda {
     font-style: italic;
 
+    /* nested selector */
     :hover {
         color: pink;
     }
 }
 
+/* id selector */
 #myname {
+    /* hex code */
     background: linear-gradient(#e66465, #9198e5);
     color: white;
 }
 
+/* attribute selector */
 img[alt="Man explaining whiteboard"], img[alt="Man explaining investigation board"] {
     width: 30%;
     height: auto;
 }
 
+/* descendant combinator */
 details audio {
     width: 50%;
 }
 
+/* child combinator */
 ol > li {
     color: gray;
 }
 
+/* general sibling combinator */
 h3 ~ ul {
     width: auto;
 }
 
+/* adjacent sibling combinator */
 #myname + li {
     color: red;
 }
 
+/* combining two selectors */
 summary.questions {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* has selector */
 h3:has(+ ul) {
     background: #64bf37;
 }
